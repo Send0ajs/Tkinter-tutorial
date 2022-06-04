@@ -8,7 +8,7 @@
 
 from tkinter import Tk, Label, Button 
 
-############################ Tutorial ############################
+############################ Tutorial ###############################
 
 # Tk() Esto te permite crear la ventana principal donde ira colocado todos los widwets que pongamos.
 
@@ -19,27 +19,28 @@ from tkinter import Tk, Label, Button
 # responde cerrando la aplicación.
 
 
-############################ Funcion a ejecutar ############################
+############################ Funcion a ejecutar #####################
 
 #Este programa cumple con la simple función de mostrarnos este texto por consola cada vez que el usuario pulse el
-# boton que mas adelante pondremos, por ello definimos esta simple funcion en la que tendra simplemente un "Print" con el texto que 
+# boton que mas adelante pondremos, para ello definimos esta simple funcion en la que tendra simplemente un "Print" con el texto que 
 # que se nos mostrara por consola.
 
 def mensaje():
     print("¡Click!")
 
+############################ Programación de las ventanas y contenido ############################
 
-#Configuración de la ventana
-ventana = Tk() 
-ventana.geometry("400x280")
-ventana.title("Ventana de ejemplo")
+#Configuración de la ventana.
 
-#Configuración
-lbl = Label(ventana, text="Pulsa click para que sucedan cosas magicas.")
+ventana = Tk() #Creamos la ventana.  [1º] 
+ventana.geometry("400x280") #Definimos la resolución de la ventana.  [2º]
+ventana.title("Aplicación gráfica: Parte 1") #Definimos el nombre de la ventana.  [3º]
+
+#Interior y contenido. (Widwets)
+lbl = Label(ventana, text="Pulsa click para que sucedan cosas magicas.") 
 lbl.pack()
 
-btn = Button(ventana, text="Click", command=mensaje)
+btn = Button(ventana, text="Click", command=mensaje) #Creamos el botoncito donde aparece "Click" 
 btn.pack()
 
 ventana.mainloop()
-
