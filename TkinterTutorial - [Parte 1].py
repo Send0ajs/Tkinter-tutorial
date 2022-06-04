@@ -32,9 +32,9 @@ def mensaje():
 
 #Configuración de la ventana.
 
-ventana = Tk() #Creamos la ventana.  [1º] 
-ventana.geometry("400x280") #Definimos la resolución de la ventana.  [2º]
-ventana.title("Aplicación gráfica: Parte 1") #Definimos el nombre de la ventana.  [3º]
+ventana = Tk() # [1º] Creamos la ventana. 
+ventana.geometry("400x280") # [2º] Definimos la resolución de la ventana.  
+ventana.title("Aplicación gráfica: Parte 1") # [3º] Definimos el nombre de la ventana.  
 
 #Interior y contenido. (Widwets)
 lbl = Label(ventana, text="Pulsa click para que sucedan cosas magicas.") 
@@ -43,4 +43,5 @@ lbl.pack()
 btn = Button(ventana, text="Click", command=mensaje) #Creamos el botoncito donde aparece "Click" 
 btn.pack()
 
-ventana.mainloop()
+ventana.mainloop() # Esta ultima parte es importante agregarla y que sin ella la ventana no se ejecutaria al no poder tener
+# interacción con ella el usuario.
